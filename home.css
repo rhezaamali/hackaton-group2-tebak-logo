@@ -1,0 +1,75 @@
+.aaaaa {
+  position: relative;
+  overflow: hidden;
+  height: 700px;
+  background-image: url(https://www.wallpaperuse.com/wallp/11-117022_m.jpg);
+  background-size: cover;
+}
+
+#judul {
+    color: rgb(4, 112, 18);
+    font-size: 40px;
+    text-align: center;
+    font-size: 10rem;
+}
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  justify-content: center;
+}
+
+.btn {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: 5px solid #0e6e2b;
+  border-radius: 2em;
+  color: #0e6e2b;
+  cursor: pointer;
+  display: flex;
+  /* justify-content: center;
+  flex-direction: column; */
+  /* align-self: center; */
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1;
+  margin: 20px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  
+}
+.btn:hover, .btn:focus {
+  color: #fff;
+  outline: 0;
+}
+
+.first {
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.first:hover {
+  box-shadow: 0 0 20px 20px #0e6e2b inset;
+}
+
+.wrapper {
+  width:900px;
+  margin: auto;
+}
+.wrapper .text {
+  font-family: 'Share', cursive;
+  font-size:100px;
+  font-weight: bold;
+  text-shadow: 5px 5px 0px #f0e8db, 8px 8px 0px #6c5257;
+  color: #b33939;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+}
