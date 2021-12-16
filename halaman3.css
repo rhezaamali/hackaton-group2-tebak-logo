@@ -2,7 +2,7 @@ body {
   margin: 0;
   text-align: center;
   font-family: Verdana, Tahoma, sans-serif;
-  background-image: url(Background.jpg);
+  /* background-image: url(Background.jpg); */
 
   background-position: center;
   background-size: cover;

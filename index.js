@@ -33,73 +33,118 @@ let logoQuestion = {
   dodge: 'https://www.jetpunk.com/img/user-photo-library/7e/7ea39c8106-450.png'
 }
 
-// console.log(Object.keys(logoQuestion).length);
+// ambil nama pengguna
+let username;
+function getName() {
+  username = document.getElementsByClassName('form-control').value
+  let name = document.getElementById('nama')
+  name.innerHTML = username
+}
 
 // random logo
 let logoName = Object.keys(logoQuestion)
-console.log(logoName);
-// logoName.splice(logoName[0], 1)
-// console.log(logoName);
+
+// munculin logo
 let answer;
-function generateRandomLogo(input, logoDB) {
-  let randomIndex = Math.floor(Math.random()*input.length)
-  let imageLink = logoDB[input[randomIndex]]
-  let image = document.getElementById('logoImage').src=imageLink
-  // console.log(input[randomIndex]);
-  // console.log(imageLink);
-  answer = input[randomIndex]
+function generateLogo() {
+  let randomIndex = Math.floor(Math.random()*logoName.length)
+  answer = logoName[randomIndex]
+  // console.log(randomIndex);
+  let linkImage = logoQuestion[logoName[randomIndex]]
+  document.getElementById('logoImage').src=linkImage
+  logoName.splice(randomIndex, 1)
 }
-console.log(generateRandomLogo(logoName, logoQuestion));
-// console.log(logoName);
-// console.log(answer);
 
-function checkAnswer(input, event) {
-  event.prevent
-  if (input === answer) {
-    console.log('selamat anda menang');
+generateLogo()
+
+// check jawaban
+let score = 0
+let question = 1;
+function checkAnswer() {
+  let input = document.getElementById('guessField').value
+  let scoreUser = document.getElementById('score')
+  if (answer === input) {
+    score += 20
+    scoreUser.innerHTML = `score = ${score}`
   }
-}
+  let pertanyaan = document.getElementById('progressText')
+  question++
+  pertanyaan.innerHTML = `Question ${question}/5`
+  input = document.getElementById('guessField').value = ''
+  // userInput.innerHTML = ''
 
-function nextQuestion() {
-
-}
-
-// punya bintang
-
-function generateQuestion() {
-  let jokes = [];
-  let randomIndex = Math.floor(Math.random() * jokes.length);
-  let randomQuestion = jokes[randomIndex];
-
-  // selector
-  let questionElement = document.querySelector("#question-container");
-  questionElement.innerHTML = randomQuestion.question;
-  return randomQuestion; // object
-}
-
-
-// ketika htmlnya jalan / di refresh
-let generatedQuestion = generateQuestion();
-let counter = 0;
-
-function checkAnswer(event) {
-  // supaya form tidak mentrigger refresh
-  event.preventDefault();
-  let answerResult = "";
-
-  // check jawaban dari user
-  let userAnswer = document.getElementById("user-answer").value;
-
-  // validasi
-  if (!userAnswer) {
-    alert("input harus diisi");
-    return;
+  if (question === 6) {
+    alert(`score kamu ${score}`)
   }
-  if (userAnswer === generatedQuestion.answer) {
-    answerResult = "benar";
-    counter += 10
-  } else {
-    answerResult = "salah";
-  }
-  counter++;
+
+  generateLogo()
 }
+
+
+
+// // console.log(logoName);
+// // logoName.splice(logoName[0], 1)
+// // console.log(logoName);
+// let answer;
+// function generateRandomLogo(input, logoDB) {
+//   let randomIndex = Math.floor(Math.random()*input.length)
+//   let imageLink = logoDB[input[randomIndex]]
+//   let image = document.getElementById('logoImage').src=imageLink
+//   // console.log(input[randomIndex]);
+//   // console.log(imageLink);
+//   answer = input[randomIndex]
+// }
+// console.log(generateRandomLogo(logoName, logoQuestion));
+// // console.log(logoName);
+// // console.log(answer);
+
+// function checkAnswer(input, event) {
+//   event.prevent
+//   if (input === answer) {
+//     console.log('selamat anda menang');
+//   }
+// }
+
+// function nextQuestion() {
+
+// }
+
+// // punya bintang
+
+// function generateQuestion() {
+//   let jokes = [];
+//   let randomIndex = Math.floor(Math.random() * jokes.length);
+//   let randomQuestion = jokes[randomIndex];
+
+//   // selector
+//   let questionElement = document.querySelector("#question-container");
+//   questionElement.innerHTML = randomQuestion.question;
+//   return randomQuestion; // object
+// }
+
+
+// // ketika htmlnya jalan / di refresh
+// let generatedQuestion = generateQuestion();
+// let counter = 0;
+
+// function checkAnswer(event) {
+//   // supaya form tidak mentrigger refresh
+//   event.preventDefault();
+//   let answerResult = "";
+
+//   // check jawaban dari user
+//   let userAnswer = document.getElementById("user-answer").value;
+
+//   // validasi
+//   if (!userAnswer) {
+//     alert("input harus diisi");
+//     return;
+//   }
+//   if (userAnswer === generatedQuestion.answer) {
+//     answerResult = "benar";
+//     counter += 10
+//   } else {
+//     answerResult = "salah";
+//   }
+//   counter++;
+// }
