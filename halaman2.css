@@ -1,0 +1,71 @@
+/* // css di sini */
+body {
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-position: center;
+    /* background-image: url("https://media.istockphoto.com/photos/too-many-questions-picture-id487063216?b=1&k=20&m=487063216&s=170667a&w=0&h=IwEuixE6Z6VQiv73JHcsZq66sI1lA-2Ft63ySxZKVt8="); */
+}
+h1 {
+    margin-left: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+img {
+       width: 300px;
+       height: 100px;
+}
+
+.container-form-login > form {
+    width: 100%;
+}
+
+.container-form-login {
+    /* background-color: rgb(245, 222, 222); */
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-control {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(248, 139, 139);
+    color: black;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    outline-style: none;
+    width: -webkit-fill-available;
+}
+
+.style3 {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    
+
+}
+
+#btn-login {
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 10px 0;
+    width: 100%;
+    background-color: rgb(0, 255, 128);
+    color: white;
+    border: none;
+}
