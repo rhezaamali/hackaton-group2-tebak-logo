@@ -1,0 +1,18 @@
+Ide hackaton:
+1. random makanan
+2. sticky notes:
+    -pengingat / catatan
+3. games tebak kata 
+4. tebak logo (2)
+4. tebak orang
+    - kaya tonight show
+
+
+TEBAK LOGO
+tampilan 1: [anin]
+  home start
+tampilan 2: [jimmy]
+  login username
+tampilan 3: [rheza, ihsan, bintang]
+  isi games
+  menang/kalah
